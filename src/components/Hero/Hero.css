@@ -1,0 +1,44 @@
+.hero {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.hero-content {
+	opacity: 0;
+	margin-top: 100px;
+	animation: 1s slide-fade-in 1s forwards;
+}
+
+.hero h1 {
+	font-weight: bold;
+	font-size: 4.5rem;
+	text-shadow: var(--shadow);
+}
+
+.hero h3 {
+	font-size: 1.75rem;
+	font-weight: 300;
+	text-shadow: var(--shadow);
+	margin-bottom: 3.5rem;
+}
+
+@keyframes slide-fade-in {
+	100% {
+		opacity: 1;
+		margin: 0;
+	}
+}
+
+@media (max-width: 800px) {
+	.hero h1 {
+		font-size: 3rem;
+	}
+
+	.hero h3 {
+		font-size: 1.5rem;
+	}
+}

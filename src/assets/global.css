@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+:root {
+    --body-font: 'Varela Round', 'Roboto', sans-serif !important;
+	--body-font-size: 16px;
+	--colors-amber300: #fcd75d;
+	--colors-amber400: #F7CE51;
+	--colors-slate0: #FFFFFF;
+	--colors-slate600: #434956;
+    --colors-slate700: #313743;
+	--colors-slate800: #222833;
+	--colors-slate900: #151A23;
+	--colors-slate1000: #000000;
+	--shadow: 0.125rem 0.125rem rgba(0, 0, 0, 0.3);;
+	--toastify-color-dark: var(--colors-slate800);
+	--toastify-font-family: var(--body-font);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+html {
+	font-family: var(--body-font);
+	font-size: var(--body-font-size);
+	color: var(--colors-slate0);
+}
+
+body {
+	background: url('../assets/bg-peaks.svg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+section {
+	min-height: 100vh;
+	padding: 100px 80px;
+}

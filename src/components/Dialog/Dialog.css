@@ -1,0 +1,87 @@
+.dialog {
+    width: 360px;
+    height: 280px;
+    z-index: 100;
+    position: absolute;
+    top: -280px;
+    left: calc(50% - 180px);
+    background: var(--colors-slate700);
+    transition: .6s;
+}
+
+.dialog.open {
+    top: calc(50% - 140px);
+}
+
+.dialog.open+.dialog-overlay {
+    display: block;
+}
+
+.dialog-overlay {
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--colors-slate1000);
+    opacity: 0.5;
+}
+
+.dialog-content {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--colors-slate0);
+    padding: 1.5rem;
+}
+
+.dialog-content h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    position: relative;
+}
+
+.dialog-content h4::after {
+    content: "";
+    width: 100%;
+    height: 0.125rem;
+    position: absolute;
+    bottom: -0.45rem;
+    left: 0;
+    background: var(--colors-amber400);
+}
+
+.dialog-content h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 3rem;
+}
+
+.dialog-btns {
+    height: 25%;
+}
+
+.dialog-btns button {
+    width: 50%;
+    height: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    cursor: pointer;
+    color: var(--colors-slate900);
+    background: var(--colors-amber400);
+}
+
+.dialog-btns button:hover {
+    background: var(--colors-amber300);
+}
+
+@media screen and (max-width: 450px) {
+    .dialog {
+        width: 300px;
+        left: calc(50% - 150px);
+    }
+}

@@ -1,0 +1,49 @@
+.container {
+	max-width: 1200px;
+	margin: 100px auto 0;
+	animation: 0.5s fade-in 0.1s forwards;
+	opacity: 0;
+}
+
+.grid-row {
+	display: grid;
+	justify-content: center;
+	align-items: baseline;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
+	grid-gap: 1rem 1rem;
+}
+
+.grid-item {
+	display: flex;
+	flex-direction: column-reverse;
+	text-align: center;
+	align-items: center;
+	padding: 1rem 0rem;
+	border-radius: 1rem;
+	color: var(--colors-slate0);
+	background-color: var(--colors-slate700);
+}
+
+.grid-item img {
+	width: 50%;
+}
+
+.grid-item span {
+	padding: 1.5rem;
+	line-height: 1;
+}
+
+.grid-item h3 {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+}
+
+.grid-item .upgrade-btn {
+	padding: 0.75rem 1.25rem;
+}
+
+@keyframes fade-in {
+	100% {
+		opacity: 1;
+	}
+}
